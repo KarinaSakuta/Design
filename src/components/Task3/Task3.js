@@ -45,19 +45,11 @@ export default class Task3 extends Component {
         const { key, propertyName } = target.dataset;
 
         const currentValues = this.getCurrentValues();
-        if ( target.value.length > 1) {
-            target.value =  target.value.slice(0,1);
-        } else {
+
+        const myRe = /\d/;
+
+        if (( myRe.exec(target.value) && target.value.length <= 1) || target.value === '') {
             currentValues[key][propertyName] = target.value;
-        }
-
-
-        this.props.onChange({
-            completed: false,
-            result: currentValues,
-        });
-
-        if (this.areAllValuesSet(currentValues)) {
             this.props.onChange({
                 completed: true,
                 result: currentValues,
@@ -77,20 +69,8 @@ export default class Task3 extends Component {
         currentValues[key][propertyName] = target.value;
 
         this.props.onChange({
-            completed: false,
+            completed: true,
             result: currentValues,
-        });
-        if (this.areAllValuesSet(currentValues)) {
-            this.props.onChange({
-                completed: true,
-                result: currentValues,
-            });
-        }
-    }
-
-    areAllValuesSet(values) {
-        return Object.values(values).every((item) => {
-            return Boolean(item.number) && Boolean(item.text);
         });
     }
 
@@ -139,14 +119,13 @@ export default class Task3 extends Component {
             return (
                 <div key={key} className="remembrance__item">
                     <input
-                        type="number"
+                        type="text"
                         className={numberClasses} 
                         data-key={key} 
                         data-property-name="number" 
                         value={number} 
                         onChange={this.handleChange}
                         disabled={!isEditable}
-                        maxlength="1"
                     />
                     <div className={textClasses}>
                         <TextField
