@@ -193,7 +193,7 @@ export default class Task4 extends Component {
                     <p className="illustration__text"><span className="illustration__bold">{task4Content.bold2}</span>{task4Content.text3}</p>
                     <div className="illustration__text-container">
                         <p className="illustration__text-list">{task4Content.text4}</p>
-                        <p className="illustration__text-list illustration__text-list_indent">{task4Content.text5}<a href={task4Content.href}>ссылке</a>{task4Content.text6}</p>
+                        <p className="illustration__text-list illustration__text-list_indent">{task4Content.text5}<a href={task4Content.href} target="_blank">ссылке</a>{task4Content.text6}</p>
                         <p className="illustration__text-list illustration__text-list_indent">{task4Content.text7}</p>
                         <p className="illustration__text-list illustration__text-list_indent">{task4Content.text8}</p>
                     </div>

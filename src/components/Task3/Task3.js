@@ -18,18 +18,22 @@ export default class Task3 extends Component {
 
         if (isResultsEmpty && !timeOut && !finished) {
             return TASK_STATE.initial;
+            console.log('initial');
         }
 
         if (timeOut) {
             return TASK_STATE.editing;
+            console.log('editing');
         }
 
         if (!isResultsEmpty && !timeOut && !finished) {
             return TASK_STATE.editingFinished;
+            console.log('editingFinished');
         }
 
         if (finished) {
             return TASK_STATE.finalResult;
+            console.log('finished');
         }
 
         throw new Error('Task3: invalid state');
@@ -41,9 +45,11 @@ export default class Task3 extends Component {
         const { key, propertyName } = target.dataset;
 
         const currentValues = this.getCurrentValues();
-
-        currentValues[key][propertyName] = target.value;
-
+        if ( target.value.length > 1) {
+            target.value =  target.value.slice(0,1);
+        } else {
+            currentValues[key][propertyName] = target.value;
+        }
 
 
         this.props.onChange({
@@ -60,19 +66,7 @@ export default class Task3 extends Component {
     }
 
     componentDidMount() {
-        const currentValues = this.getCurrentValues();
-
-        this.props.onChange({
-            completed: false,
-            result: currentValues,
-        });
-
-        if (this.areAllValuesSet(currentValues)) {
-            this.props.onChange({
-                completed: true,
-                result: currentValues,
-            });
-        }
+        this.getTaskState();
     }
 
     handleChangeField = (event, propertyName, key) => {
@@ -132,25 +126,27 @@ export default class Task3 extends Component {
 
             const numberClasses = classnames('remembrance__input-number', {
                 'remembrance__input-number_initial': !isInitial && !isEditable,
-                'remembrance__input-number_not-empty': Boolean(number),
+                'remembrance__input-number_not-empty': Boolean(number) && isEditable,
                 'remembrance__input-number_editable': isEditable,
             });
 
             const textClasses = classnames('remembrance__input-text', {
                 'remembrance__input-text_initial': !isInitial && !isEditable,
-                'remembrance__input-text_not-empty': Boolean(text),
+                'remembrance__input-text_not-empty': Boolean(text) && isEditable,
                 'remembrance__input-text_editable': isEditable,
             });
 
             return (
                 <div key={key} className="remembrance__item">
-                    <input 
+                    <input
+                        type="number"
                         className={numberClasses} 
                         data-key={key} 
                         data-property-name="number" 
                         value={number} 
                         onChange={this.handleChange}
                         disabled={!isEditable}
+                        maxlength="1"
                     />
                     <div className={textClasses}>
                         <TextField

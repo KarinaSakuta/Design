@@ -7,7 +7,8 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      result: null,
+      result: {},
+        timeout: true,
     };
   }
 
@@ -24,6 +25,7 @@ export default class App extends React.Component {
     );
   }
 
+
   render() {
     const { result } = this.state;
 
@@ -33,16 +35,12 @@ export default class App extends React.Component {
         <Task3
             result={result}
             onChange={this.onChange}
-            timeOut={false}
+            timeOut={this.state.timeOut}
             finished={false}
             fResults={this.getFResults()}
         />
-        <Task4
-            result={result}
-            onChange={this.onChange}
-            finished={false}
-            fResults={this.getFResults()}
-        />
+            <button onClick={() => this.setState({timeOut: !this.state.timeOut})}>ggg</button>
+
         </main>
       </div>
     );
