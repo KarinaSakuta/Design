@@ -49,16 +49,7 @@ export default class Task4 extends Component {
     }
 
     getTaskState() {
-        const { timeOut, finished, results } = this.props;
-        const isResultsEmpty = !results || Object.keys(results).length === 0;
-
-        // if (isResultsEmpty && !timeOut && !finished) {
-        //     return TASK_STATE.initial;
-        // }
-
-        // if (timeOut) {
-        //     return TASK_STATE.editing;
-        // }
+        const { finished } = this.props;
 
         if (!finished) {
             return TASK_STATE.editing;
@@ -79,22 +70,22 @@ export default class Task4 extends Component {
         currentValues[key][propertyName] = target.value;
 
         this.props.onChange({
-            complited: true, 
-            results: currentValues,
+            completed: true,
+            result: currentValues,
         });
     }
 
     getCurrentValues() {
         const { initialValues } = task4Content;
-        const { results } = this.props;
+        const { result } = this.props;
 
         if (this.getTaskState() === TASK_STATE.initial) {
             return { ...task4Content.initialValues };
         }
 
         return Object.keys(initialValues).reduce((currentValues, key) => {
-            const captions = results && results[key] && results[key].captions || '';
-            const words = results && results[key] && results[key].words || '';
+            const captions = result && result[key] && result[key].captions || '';
+            const words = result && result[key] && result[key].words || '';
 
             return {
                 ...currentValues,

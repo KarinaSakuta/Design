@@ -13,8 +13,8 @@ const TASK_STATE = {
 
 export default class Task3 extends Component {
     getTaskState() {
-        const { timeOut, finished, results } = this.props;
-        const isResultsEmpty = !results || Object.keys(results).length === 0;
+        const { timeOut, finished, result } = this.props;
+        const isResultsEmpty = !result || Object.keys(result).length === 0;
 
         if (isResultsEmpty && !timeOut && !finished) {
             return TASK_STATE.initial;
@@ -47,14 +47,14 @@ export default class Task3 extends Component {
 
 
         this.props.onChange({
-            complited: false, 
-            results: currentValues,
+            completed: false,
+            result: currentValues,
         });
 
         if (this.areAllValuesSet(currentValues)) {
             this.props.onChange({
-                complited: true, 
-                results: currentValues,
+                completed: true,
+                result: currentValues,
             });
         }
     }
@@ -63,14 +63,14 @@ export default class Task3 extends Component {
         const currentValues = this.getCurrentValues();
 
         this.props.onChange({
-            complited: false,
-            results: currentValues,
+            completed: false,
+            result: currentValues,
         });
 
         if (this.areAllValuesSet(currentValues)) {
             this.props.onChange({
-                complited: true,
-                results: currentValues,
+                completed: true,
+                result: currentValues,
             });
         }
     }
@@ -83,13 +83,13 @@ export default class Task3 extends Component {
         currentValues[key][propertyName] = target.value;
 
         this.props.onChange({
-            complited: false,
-            results: currentValues,
+            completed: false,
+            result: currentValues,
         });
         if (this.areAllValuesSet(currentValues)) {
             this.props.onChange({
-                complited: true,
-                results: currentValues,
+                completed: true,
+                result: currentValues,
             });
         }
     }
@@ -102,15 +102,15 @@ export default class Task3 extends Component {
 
     getCurrentValues() {
         const { initialValues } = task3Content;
-        const { results } = this.props;
+        const { result } = this.props;
 
         if (this.getTaskState() === TASK_STATE.initial) {
             return { ...task3Content.initialValues };
         }
 
         return Object.keys(initialValues).reduce((currentValues, key) => {
-            const number = results && results[key] && results[key].number || '';
-            const text = results && results[key] && results[key].text || '';
+            const number = result && result[key] && result[key].number || '';
+            const text = result && result[key] && result[key].text || '';
 
             return {
                 ...currentValues,

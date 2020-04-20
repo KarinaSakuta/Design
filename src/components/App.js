@@ -7,13 +7,13 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      results: null,
+      result: null,
     };
   }
 
-  onChange = ({complited, results}) => {
-    console.log('onChange: ', {complited, results});
-    this.setState({ results });
+  onChange = ({completed, result}) => {
+    console.log('onChange: ', {completed, result});
+    this.setState({ result });
   }
 
   getFResults() {
@@ -25,20 +25,20 @@ export default class App extends React.Component {
   }
 
   render() {
-    const { results } = this.state;
+    const { result } = this.state;
 
     return (
       <div className="app">
         <main className="main" id="main">
         <Task3
-            results={results}
+            result={result}
             onChange={this.onChange}
             timeOut={false}
             finished={false}
             fResults={this.getFResults()}
         />
         <Task4
-            results={results}
+            result={result}
             onChange={this.onChange}
             finished={false}
             fResults={this.getFResults()}
