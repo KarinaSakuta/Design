@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import task3Content from '../../api/task3Content.json';
+import task3Content from './task3Content.json';
 import classnames from 'classnames';
 import TextField from '@material-ui/core/TextField';
 import './style.scss';

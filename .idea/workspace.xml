@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0884794c-9190-4119-bf80-01cf558b78c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/task3Content.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/task4Content.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/avatars.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/business.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/close.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/money.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/screen1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/screen1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/screen2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/screen2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/shopping.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/sleep.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Task3/Task3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Task3/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Task3/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Task4/Task4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Task4/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Task4/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="0884794c-9190-4119-bf80-01cf558b78c1" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -43,50 +13,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="44" column="10" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-685">
-              <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor>
-                <caret column="6" selection-start-column="6" selection-end-column="6" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-923" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Task4/Task4.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4920">
+            <state relative-caret-position="5160">
               <caret line="215" column="59" selection-start-line="215" selection-start-column="59" selection-end-line="215" selection-end-column="59" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -197,6 +127,30 @@
               <item name="Design" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="C:\Users\Admin\Desktop\Design" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
+            <path>
+              <item name="Design" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Admin\Desktop\Design" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Design" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Admin\Desktop\Design" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Design" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Admin\Desktop\Design" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Design" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Admin\Desktop\Design" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Task4" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -212,6 +166,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\Design\src\components\Task4" />
       <recent name="C:\Users\Admin\Downloads\Test-Project\src\components\Task4" />
     </key>
   </component>
@@ -240,16 +195,23 @@
       <workItem from="1587121774986" duration="6825000" />
       <workItem from="1587129026710" duration="9261000" />
       <workItem from="1587372817347" duration="17163000" />
-      <workItem from="1587390792540" duration="134000" />
+      <workItem from="1587390792540" duration="850000" />
     </task>
+    <task id="LOCAL-00001" summary="add: project with design tasks">
+      <created>1587390952395</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587390952395</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33383000" />
+    <option name="totallyTimeSpent" value="34099000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
@@ -273,6 +235,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add: project with design tasks" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: project with design tasks" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/api/cats.js" />
@@ -318,17 +284,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Task4/Task4.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4920">
-          <caret line="215" column="59" selection-start-line="215" selection-start-column="59" selection-end-line="215" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#262#314#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Task4/style.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3504">
@@ -359,11 +314,6 @@
     <entry file="file://$PROJECT_DIR$/src/css/main.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-923" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-685">
@@ -378,6 +328,22 @@
             <caret column="6" selection-start-column="6" selection-end-column="6" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-923" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Task4/Task4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5160">
+          <caret line="215" column="59" selection-start-line="215" selection-start-column="59" selection-end-line="215" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#262#314#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

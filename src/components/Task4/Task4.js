@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import task4Content from '../../api/task4Content.json';
-import Captions from '../../assets/img/screen2.jpg';
-import Keywords from '../../assets/img/screen1.jpg';
+import task4Content from './task4Content.json';
+import Captions from './assets/img/screen2.jpg';
+import Keywords from './assets/img/screen1.jpg';
 // import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import './style.scss';
-import avatarsImg from '../../assets/img/avatars.jpg';
-import sleepImg from '../../assets/img/sleep.jpg';
-import shoppingImg from '../../assets/img/shopping.jpg';
-import businessImg from '../../assets/img/business.jpg';
-import moneyImg from '../../assets/img/money.jpg';
+import avatarsImg from './assets/img/avatars.jpg';
+import sleepImg from './assets/img/sleep.jpg';
+import shoppingImg from './assets/img/shopping.jpg';
+import businessImg from './assets/img/business.jpg';
+import moneyImg from './assets/img/money.jpg';
 import Modal from 'react-modal';
 
 const customStyles = {
