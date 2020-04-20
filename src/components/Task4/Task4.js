@@ -106,7 +106,6 @@ export default class Task4 extends Component {
     openImageModal = (event) => {
         const target = event.target;
         const src = target.src;
-
         this.setState({ isModalOpened: true, modalImgSrc: src });
     }
 
@@ -128,7 +127,7 @@ export default class Task4 extends Component {
                     alt="modal"
                     onClick={this.closeImageModel}
                     />
-                    <div onClick={this.closeImageModel} className="illustration__modal-close-btn"></div>
+                    <div onClick={this.closeImageModel} className="illustration__modal-close-btn" />
                 </div>
             </Modal>
         );
