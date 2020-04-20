@@ -109,8 +109,10 @@ export default class Task3 extends Component {
         }
 
         return Object.keys(initialValues).reduce((currentValues, key) => {
-            const number = result && result[key] && result[key].number || '';
-            const text = result && result[key] && result[key].text || '';
+            const resultNumber = result && result[key] && result[key].number;
+            const resultText = result && result[key] && result[key].text;
+            const number = resultNumber || '';
+            const text = resultText || '';
 
             return {
                 ...currentValues,

@@ -84,8 +84,10 @@ export default class Task4 extends Component {
         }
 
         return Object.keys(initialValues).reduce((currentValues, key) => {
-            const captions = result && result[key] && result[key].captions || '';
-            const words = result && result[key] && result[key].words || '';
+            const resultCaptions = result && result[key] && result[key].captions;
+            const resultWords = result && result[key] && result[key].words;
+            const captions = resultCaptions || '';
+            const words = resultWords || '';
 
             return {
                 ...currentValues,
@@ -130,7 +132,6 @@ export default class Task4 extends Component {
 
         return valuesEntries.map(([key, item]) => {
             const { captions, words } = item;
-            const isInitial = this.getTaskState() === TASK_STATE.initial;
             const isEditable = this.getTaskState() === TASK_STATE.editing;
 
             return (
