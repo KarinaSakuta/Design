@@ -33,7 +33,7 @@ export default class App extends React.Component {
     return (
       <div className="app">
         <main className="main" id="main">
-        <Task4
+        <Task3
             result={result}
             onChange={this.onChange}
             timeOut={this.state.timeOut}

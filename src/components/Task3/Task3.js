@@ -106,16 +106,17 @@ export default class Task3 extends Component {
             const { number, text } = item;
             const isInitial = this.getTaskState() === TASK_STATE.initial;
             const isEditable = this.getTaskState() === TASK_STATE.editing;
+            const isFinalResult = this.getTaskState() === TASK_STATE.finalResult;
 
             const numberClasses = classnames('remembrance__input-number', {
                 'remembrance__input-number_initial': !isInitial && !isEditable,
-                'remembrance__input-number_not-empty': Boolean(number) && isEditable,
+                'remembrance__input-number_not-empty': Boolean(number) && isEditable || isFinalResult,
                 'remembrance__input-number_editable': isEditable,
             });
 
             const textClasses = classnames('remembrance__input-text', {
                 'remembrance__input-text_initial': !isInitial && !isEditable,
-                'remembrance__input-text_not-empty': Boolean(text) && isEditable,
+                'remembrance__input-text_not-empty': Boolean(text) && isEditable || isFinalResult,
                 'remembrance__input-text_editable': isEditable,
             });
 
@@ -150,10 +151,12 @@ export default class Task3 extends Component {
     renderTask() {
         const isInitial = this.getTaskState() === TASK_STATE.initial;
         const isEditable = this.getTaskState() === TASK_STATE.editing;
+        const isFinalResult = this.getTaskState() === TASK_STATE.finalResult;
 
         const numberClasses = classnames('remembrance__numbers', {
             'remembrance__numbers_initial': isInitial && !isEditable,
             'remembrance__numbers_editable': isEditable,
+            'remembrance__numbers_finished': isFinalResult,
         });
 
         return (
@@ -174,9 +177,7 @@ export default class Task3 extends Component {
         if (this.getTaskState() === TASK_STATE.finalResult) {
             return (
                 <>
-                    <div className="remembrance__description">
-                        <h2 className="remembrance__title">{title}</h2>
-                    </div>
+                    <h2 className="remembrance__title">{title}</h2>
                     {this.props.fResults}
                 </>
             );
