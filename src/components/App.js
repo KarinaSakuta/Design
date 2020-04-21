@@ -8,8 +8,8 @@ export default class App extends React.Component {
 
     this.state = {
       result: {},
-        timeout: false,
-        finished: true,
+      timeout: false,
+      finished: false,
     };
   }
 
@@ -33,12 +33,13 @@ export default class App extends React.Component {
     return (
       <div className="app">
         <main className="main" id="main">
-        <Task3
+        <Task4
             result={result}
             onChange={this.onChange}
             timeOut={this.state.timeOut}
             finished={this.state.finished}
             fResults={this.getFResults()}
+            marginBottom={100}
         />
             <button onClick={() => this.setState({timeOut: !this.state.timeOut})}>ggg</button>
             <button onClick={() => this.setState({finished: !this.state.finished})}>finished</button>

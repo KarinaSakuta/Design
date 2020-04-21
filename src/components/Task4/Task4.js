@@ -19,7 +19,9 @@ const customStyles = {
         right                 : 'auto',
         bottom                : 'auto',
         marginRight           : '-50%',
-        transform             : 'translate(-50%, -50%)'
+        transform             : 'translate(-50%, -50%)',
+        width: '90vw',
+        height: '75%',
     }
 };
 
@@ -116,11 +118,13 @@ export default class Task4 extends Component {
                 shouldCloseOnOverlayClick={true}
             >
                 <div className="illustration__modal-container">
-                    <img 
-                    src={this.state.modalImgSrc} 
-                    className="illustration__modal-img" 
-                    alt="modal"
-                    />
+                    <div className="illustration__modal-img-container">
+                        <img 
+                            src={this.state.modalImgSrc} 
+                            className="illustration__modal-img" 
+                            alt="modal"
+                        />
+                    </div>
                     <div onClick={this.closeImageModal} className="illustration__modal-close-btn" />
                 </div>
             </Modal>
@@ -220,7 +224,7 @@ export default class Task4 extends Component {
 
     render() {
         return (
-            <div className="illustration">
+            <div className="illustration" style={{marginBottom: this.props.marginBottom}}>
                 {this.renderTitleAndDescription()}
                 <div className="illustration__form">
                     <div className="illustration__form-container">

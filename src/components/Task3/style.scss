@@ -9,6 +9,7 @@
     &__container {
         /*padding: 55px 80px 60px 80px;*/
         // margin: 0 auto;
+        margin-bottom: 60px;
         margin-left: 80px;
     }
     &__description {
@@ -97,7 +98,6 @@
     }
     &__numbers-container {
         margin-left: 12px;
-        margin-bottom: 60px;
         display: flex;
         justify-content: left;
         flex-direction: column;
