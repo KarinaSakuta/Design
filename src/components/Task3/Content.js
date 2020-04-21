@@ -49,14 +49,14 @@ export default class Content extends Component {
                         data-key={key} 
                         value={number} 
                         onChange={this.props.handleNumberChange}
-                        disabled={!this.isEditableState()}
+                        readOnly={!this.isEditableState()}
                     />
                     <div className={textClasses}>
                         <TextField
                             data-key={key}
                             value={text}
                             onChange={(event) => this.props.handleTextChange(event, key)}
-                            disabled={!this.isEditableState()}
+                            readOnly={!this.isEditableState()}
                             multiline
                             rows={1}
                             rowsMax={2}
