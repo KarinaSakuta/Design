@@ -41,7 +41,7 @@ export default class App extends React.Component {
             fResults={this.getFResults()}
         />
             <button onClick={() => this.setState({timeOut: !this.state.timeOut})}>ggg</button>
-            <button onClick={() => this.setState({timeOut: !this.state.finished})}>finished</button>
+            <button onClick={() => this.setState({finished: !this.state.finished})}>finished</button>
 
         </main>
       </div>

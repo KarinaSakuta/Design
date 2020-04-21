@@ -107,17 +107,19 @@ export default class Task3 extends Component {
             const NotEmptyClassnameFinalNumber = Boolean(number) && isFinalResult;
             const NotEmptyClassnameEditText = Boolean(text) && isEditable;
             const NotEmptyClassnameFinalText = Boolean(text) && isFinalResult;
-            
+
             const numberClasses = classnames('remembrance__input-number', {
                 'remembrance__input-number_initial': !isInitial && !isEditable && !isFinalResult,
                 'remembrance__input-number_not-empty': NotEmptyClassnameEditNumber || NotEmptyClassnameFinalNumber,
-                'remembrance__input-number_editable': isEditable || isFinalResult,
+                'remembrance__input-number_editable': isEditable,
+                'remembrance__input-number_final': isFinalResult,
             });
 
             const textClasses = classnames('remembrance__input-text', {
                 'remembrance__input-text_initial': !isInitial && !isEditable && !isFinalResult,
                 'remembrance__input-text_not-empty': NotEmptyClassnameEditText || NotEmptyClassnameFinalText,
-                'remembrance__input-text_editable': isEditable || isFinalResult,
+                'remembrance__input-text_editable': isEditable,
+                'remembrance__input-text_final': isFinalResult,
             });
 
             return (

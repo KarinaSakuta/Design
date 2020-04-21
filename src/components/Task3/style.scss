@@ -65,7 +65,7 @@
         text-align: center;
         letter-spacing: 0.15px;
         color: rgba(0, 0, 0, 0.87);
-        &_editable {
+        &_editable, &_final {
             border-bottom: 1px solid rgba(0, 0, 0, 0.12);
         }
     }
@@ -83,7 +83,7 @@
         text-align: center;
         letter-spacing: 0.15px;
         color: rgba(0, 0, 0, 0.87);
-        &_editable {
+        &_editable, &_final {
             border-bottom: 1px solid rgba(0, 0, 0, 0.12);
         }
     }
@@ -206,6 +206,7 @@
 
     .remembrance__input-text:not(.remembrance__input-text_initial).remembrance__input-text_not-empty,
     .remembrance__input-text.remembrance__input-text_editable:active,
+    .remembrance__input-text.remembrance__input-text_editable:focus-within,
     .remembrance__input-text.remembrance__input-text_editable:focus {
         border-bottom: 1px solid rgba(0, 0, 0, 0.87);
     }
