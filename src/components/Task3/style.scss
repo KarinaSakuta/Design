@@ -9,7 +9,7 @@
     &__container {
         /*padding: 55px 80px 60px 80px;*/
         // margin: 0 auto;
-        margin-left: 80px;
+        // margin-left: 80px;
     }
     &__description {
         padding: 56px 80px 0 80px;
@@ -58,7 +58,7 @@
     }
     &__input-number {
         max-height: 64px;
-        max-width: 60px;
+        max-width: 56px;
         font-weight: 500;
         font-size: 72px;
         line-height: 33px;
@@ -120,6 +120,7 @@
             }
         }
         &_finished {
+            margin-left: -73px;
             &:first-child {
                 margin-bottom: 25px;
                 margin-top: 33px;
