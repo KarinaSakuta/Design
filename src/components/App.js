@@ -8,8 +8,8 @@ export default class App extends React.Component {
 
     this.state = {
       result: {},
-        timeout: true,
-        finished: false,
+        timeout: false,
+        finished: true,
     };
   }
 

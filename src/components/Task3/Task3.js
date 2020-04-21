@@ -17,22 +17,18 @@ export default class Task3 extends Component {
         const isResultsEmpty = !result || Object.keys(result).length === 0;
 
         if (isResultsEmpty && !timeOut && !finished) {
-            console.log('initial');
             return TASK_STATE.initial;
         }
         if (finished) {
-            console.log('finished');
             return TASK_STATE.finalResult;
         }
 
         if (timeOut) {
-            console.log('editing');
             return TASK_STATE.editing;
         }
 
 
         if (!isResultsEmpty && !timeOut && !finished) {
-            console.log('editingFinished');
             return TASK_STATE.editingFinished;
         }
 
@@ -107,17 +103,18 @@ export default class Task3 extends Component {
             const isInitial = this.getTaskState() === TASK_STATE.initial;
             const isEditable = this.getTaskState() === TASK_STATE.editing;
             const isFinalResult = this.getTaskState() === TASK_STATE.finalResult;
-
+            const NotEmptyClassnameEdit = Boolean(number) && isEditable;
+            const NotEmptyClassnameFinal = Boolean(number) && isFinalResult;
             const numberClasses = classnames('remembrance__input-number', {
                 'remembrance__input-number_initial': !isInitial && !isEditable && !isFinalResult,
-                'remembrance__input-number_not-empty': Boolean(number) && isEditable || isFinalResult,
-                'remembrance__input-number_editable': isEditable,
+                'remembrance__input-number_not-empty': NotEmptyClassnameEdit || NotEmptyClassnameFinal,
+                'remembrance__input-number_editable': isEditable || isFinalResult,
             });
 
             const textClasses = classnames('remembrance__input-text', {
                 'remembrance__input-text_initial': !isInitial && !isEditable && !isFinalResult,
-                'remembrance__input-text_not-empty': Boolean(text) && isEditable || isFinalResult,
-                'remembrance__input-text_editable': isEditable,
+                'remembrance__input-text_not-empty': NotEmptyClassnameEdit || NotEmptyClassnameFinal,
+                'remembrance__input-text_editable': isEditable || isFinalResult,
             });
 
             return (
