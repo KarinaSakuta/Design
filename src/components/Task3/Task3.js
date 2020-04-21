@@ -17,23 +17,23 @@ export default class Task3 extends Component {
         const isResultsEmpty = !result || Object.keys(result).length === 0;
 
         if (isResultsEmpty && !timeOut && !finished) {
-            return TASK_STATE.initial;
             console.log('initial');
+            return TASK_STATE.initial;
+        }
+        if (finished) {
+            console.log('finished');
+            return TASK_STATE.finalResult;
         }
 
         if (timeOut) {
-            return TASK_STATE.editing;
             console.log('editing');
+            return TASK_STATE.editing;
         }
+
 
         if (!isResultsEmpty && !timeOut && !finished) {
-            return TASK_STATE.editingFinished;
             console.log('editingFinished');
-        }
-
-        if (finished) {
-            return TASK_STATE.finalResult;
-            console.log('finished');
+            return TASK_STATE.editingFinished;
         }
 
         throw new Error('Task3: invalid state');
@@ -58,7 +58,10 @@ export default class Task3 extends Component {
     }
 
     componentDidMount() {
-        this.getTaskState();
+        this.props.onChange({
+            completed: true,
+            result: this.props.result,
+        });
     }
 
     handleChangeField = (event, propertyName, key) => {
@@ -149,7 +152,7 @@ export default class Task3 extends Component {
         const isEditable = this.getTaskState() === TASK_STATE.editing;
 
         const numberClasses = classnames('remembrance__numbers', {
-            'remembrance__numbers_initial': !isInitial && !isEditable,
+            'remembrance__numbers_initial': isInitial && !isEditable,
             'remembrance__numbers_editable': isEditable,
         });
 

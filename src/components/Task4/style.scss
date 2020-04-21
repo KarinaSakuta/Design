@@ -6,9 +6,11 @@
         margin: 0 auto;
     }
     &__description {
+        text-align: left;
         padding: 55px 80px 0 80px;
     }
     &__title {
+        text-align: left;
         margin-bottom: 29px;
         font-family: Roboto;
         font-style: normal;
@@ -19,6 +21,7 @@
         color: rgba(0, 0, 0, 0.87);
     }
     &__title-task {
+        text-align: left;
         margin-bottom: 7px;
         font-family: Roboto;
         font-style: normal;
@@ -29,6 +32,7 @@
         color: rgba(0, 0, 0, 0.87);
     }
     &__text {
+        text-align: left;
         margin-bottom: 9px;
         font-family: Roboto;
         font-style: normal;
@@ -38,6 +42,7 @@
         color: rgba(0, 0, 0, 0.87);
     }
     &__text-task {
+        text-align: left;
         margin-bottom: 27px;
         font-family: Roboto;
         font-style: normal;
@@ -47,6 +52,7 @@
         color: rgba(0, 0, 0, 0.87);
     }
     &__img-title {
+        text-align: left;
         margin-bottom: 13px;
         margin-left: 80px;
         font-family: Roboto;
@@ -62,7 +68,7 @@
     }
     &__img {
         border-top: 1px solid rgba(0, 0, 0, 0.12);
-        border: 1px solid rgba(0, 0, 0, 0.12);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
         width: 100%;
         max-width: 800px;
     }
@@ -118,7 +124,7 @@
         width: 20px;
         height: 20px;
         top: 5px;
-        right: 10px;
+        right: 5px;
         border-radius: 20px;
         background: url('./assets/img/close.png') no-repeat;
         cursor: pointer;
@@ -128,17 +134,25 @@
             background: url('./assets/img/close.jpg') no-repeat;
         }
     }
+    &__modal-container {
+        z-index: 10;
+    }
     &__bold {
         font-weight: bolder;
     }
 }
+.ReactModalPortal {
+    z-index: 10 !important;
+}
 
 .ReactModal__Overlay {
     background-color: rgba(0, 0, 0, 0.43) !important;
+    z-index: 10 !important;
 }
 
 .ReactModal__Content {
     margin-right: -47% !important;
+    z-index: 10 !important;
 }
 
 .MuiInputLabel-outlined {
