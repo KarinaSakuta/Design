@@ -1,9 +1,9 @@
 .remembrance {
     max-width: 800px;
-    max-height: 507px;
+    min-height: 507px;
     font-family: Roboto;
     // margin: 0 auto;
-    margin-left: 80px;
+
     // border: 1px solid;
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
@@ -15,6 +15,7 @@
         }
     }
     &_final {
+        margin-left: 80px;
         .remembrance__title {
             margin-bottom: 24px;
         }
@@ -30,7 +31,8 @@
         // margin-left: 80px;
     }
     &__description {
-        padding: 56px 80px 0 80px;
+        // padding: 56px 80px 0 80px;
+        padding: 42px 80px 0;
     }
     &__task-description {
         padding: 0 80px;
