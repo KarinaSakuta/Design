@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { TASK_STATE, IMAGE, customStyles } from './constants';
 import TextField from '@material-ui/core/TextField';
-import Modal from 'react-modal';
+import Modal from '@material-ui/core/Modal';
+import Dialog from '@material-ui/core/Dialog';
 
 export default class Content extends Component {
     constructor(props) {
@@ -24,28 +25,50 @@ export default class Content extends Component {
 
     renderImageModal() {
         return (
-            <Modal
-                isOpen={this.state.isModalOpened}
-                style={customStyles}
-                contentLabel="onRequestClose Example"
-                onRequestClose={this.closeImageModal}
-                shouldCloseOnOverlayClick={true}
+            // <Modal
+            //     isOpen={this.state.isModalOpened}
+            //     style={customStyles}
+            //     contentLabel="onRequestClose Example"
+            //     onRequestClose={this.closeImageModal}
+            //     shouldCloseOnOverlayClick={true}
+            // >
+            //     <div className="illustration__modal-container">
+            //         <div className="illustration__modal-img-container">
+            //             <img 
+            //                 src={this.state.modalImgSrc} 
+            //                 className="illustration__modal-img" 
+            //                 alt="modal"
+            //             />
+            //         </div>
+            //         <div onClick={this.closeImageModal} className="illustration__modal-close-btn" />
+            //     </div>
+            // </Modal>
+
+            // <button type="button" onClick={handleOpen}>
+            //     Open Modal
+            // </button>
+            <Dialog
+                open={this.state.isModalOpened}
+                onClose={this.closeImageModal}
+                onBackdropClick={this.closeImageModal}
+                aria-labelledby="simple-dialog-title"
+                disableScrollLock={false}
             >
                 <div className="illustration__modal-container">
-                    <div className="illustration__modal-img-container">
-                        <img 
-                            src={this.state.modalImgSrc} 
-                            className="illustration__modal-img" 
-                            alt="modal"
-                        />
+                     <div className="illustration__modal-img-container">
+                         <img 
+                             src={this.state.modalImgSrc} 
+                             className="illustration__modal-img" 
+                             alt="modal"
+                         />
+                         <div onClick={this.closeImageModal} className="illustration__modal-close-btn" />
                     </div>
-                    <div onClick={this.closeImageModal} className="illustration__modal-close-btn" />
                 </div>
-            </Modal>
+          </Dialog>
         );
     }
 
-    render() {
+    renderContent() {
         const currentValues = this.props.values;
         const valuesEntries = Object.entries(currentValues)
 
@@ -66,7 +89,7 @@ export default class Content extends Component {
                     </div>
                     <div className="illustration__field-container">
                         <TextField
-                            value={captions}
+                            value={isEditable ? captions : captions || ' '}
                             onChange={(event) => this.props.handleChange(event, "captions", key)}
                             InputProps={{
                                 readOnly: !isEditable
@@ -80,7 +103,7 @@ export default class Content extends Component {
                         <TextField
                             data-key={key} 
                             data-property-name="words"
-                            value={words}
+                            value={isEditable ? words : words || ' '}
                             onChange={(event) => this.props.handleChange(event, "words", key)}
                             InputProps={{
                                 readOnly: !isEditable
@@ -92,9 +115,17 @@ export default class Content extends Component {
                             variant="outlined"
                         />
                     </div>
-                    {this.renderImageModal()}
                 </div>
             );
         });
+    }
+
+    render() {
+        return (
+            <>
+                {this.renderContent()}
+                {this.renderImageModal()}
+            </>
+        );
     }
 }

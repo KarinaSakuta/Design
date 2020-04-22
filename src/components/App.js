@@ -39,7 +39,7 @@ export default class App extends React.Component {
             timeOut={this.state.timeOut}
             finished={this.state.finished}
             fResults={this.getFResults()}
-            marginBottom={100}
+            marginBottom={60}
         />
             <button onClick={() => this.setState({timeOut: !this.state.timeOut})}>ggg</button>
             <button onClick={() => this.setState({finished: !this.state.finished})}>finished</button>
