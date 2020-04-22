@@ -9,6 +9,20 @@
     input::-webkit-inner-spin-button {
         -webkit-appearance: none;
     }
+    &_not-final {
+        .remembrance__container {
+            margin: 0 auto !important;
+        }
+    }
+    &_final {
+        .remembrance__title {
+            margin-bottom: 24px;
+        }
+        .remembrance__numbers-container {
+            margin-left: 48px;
+        }
+
+    }
     &__container {
         /*padding: 55px 80px 60px 80px;*/
         // margin: 0 auto;
@@ -222,7 +236,7 @@
         }
     }
 
-    .remembrance__input-text_editable {
+    .remembrance__input-text_editable, .remembrance__input-text_final {
         .MuiInputBase-input {
             margin-left: -15px !important;
             margin-top: 14px;
@@ -237,7 +251,7 @@
     }
 
     .remembrance__item:last-child {
-        .remembrance__input-text_editable {
+        .remembrance__input-text_editable, .remembrance__input-text_final {
             .MuiInputBase-input {
                 margin-left: -13.5px !important;
             }
