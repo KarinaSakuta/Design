@@ -154,7 +154,9 @@ export default class Task4 extends Component {
                         <TextField
                             value={captions}
                             onChange={(event) => this.handleChange(event, "captions", key)}
-                            readOnly={!isEditable}
+                            InputProps={{
+                                readOnly: !isEditable
+                            }}
                             label="Введите заголовки"
                             multiline
                             rows={4}
@@ -166,7 +168,9 @@ export default class Task4 extends Component {
                             data-property-name="words"
                             value={words}
                             onChange={(event) => this.handleChange(event, "words", key)}
-                            readOnly={!isEditable}
+                            InputProps={{
+                                readOnly: !isEditable
+                            }}
                             label="Введите ключевые слова"
                             multiline
                             rows={4}
