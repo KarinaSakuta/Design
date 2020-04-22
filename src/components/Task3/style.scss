@@ -236,7 +236,7 @@
         }
     }
 
-    .remembrance__input-text_editable, .remembrance__input-text_final {
+    .remembrance__input-text_editable {
         .MuiInputBase-input {
             margin-left: -15px !important;
             margin-top: 14px;
@@ -248,6 +248,35 @@
         //         margin-left: -13.5px !important;
         //     }
         // }
+    }
+    .remembrance__numbers_finished:first-child {
+        .remembrance__input-text_final {
+            .MuiInputBase-input {
+                margin-left: -15px !important;
+                margin-top: 14px;
+                margin-bottom: -6px;
+                
+            }
+        }
+    }
+
+    .remembrance__numbers_finished:last-child {
+        .remembrance__input-text_final {
+            .MuiInputBase-input {
+                margin-left: -16px!important;
+                margin-top: 14px;
+                margin-bottom: -6px;
+                
+            }
+        }
+        .remembrance__input-text_final:last-child {
+            .MuiInputBase-input {
+                margin-left: -15px!important;
+                margin-top: 14px;
+                margin-bottom: -6px;
+                
+            }
+        }
     }
 
     .remembrance__item:last-child {
