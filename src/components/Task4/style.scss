@@ -172,7 +172,8 @@
     &__modal-container {
         overflow: hidden;
         position: relative;
-
+        display: flex;
+        justify-content: center;    
         &_horizontal {
             width: calc(100vw - 64px);
             height: auto;
