@@ -1,5 +1,9 @@
 .illustration {
     // border: 1px solid;;
+    // .MuiDialog-paperWidthSm {
+    //     min-width: 700px !important;
+    //     max-width: 1100px !important;
+    // }
     width: 100%;
     max-width: 800px;
     font-weight: normal;
@@ -231,10 +235,7 @@
         overflow-y: overlay;
         position: fixed;
     }
-    .MuiDialog-paperWidthSm {
-        min-width: 700px !important;
-        max-width: 1100px !important;
-    }
+
     .cross-svg__container:hover {
         .cross-svg {
             &_path {
