@@ -25,9 +25,9 @@ export const TASK_STATE = {
 };
 
 export const IMAGE = {
-    0: avatarsImg,
-    1: shoppingImg,
-    2: sleepImg,
-    3: businessImg,
-    4: moneyImg,
+    0: { src: avatarsImg, orientation: 'vertical' },
+    1: { src: shoppingImg, orientation: 'vertical' },
+    2: { src: sleepImg, orientation: 'vertical' },
+    3: { src: businessImg, orientation: 'horizontal' },
+    4: { src: moneyImg, orientation: 'vertical' },
 }

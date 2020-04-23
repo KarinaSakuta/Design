@@ -146,11 +146,18 @@
     &__modal-img {
         z-index: 9999999999999;
         position: relative;
-        width: auto;
-        max-height: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+
+        .illustration__modal-container_horizontal & {
+            height: auto;
+            max-width: 100%;
+        }
+        .illustration__modal-container_vertical & {
+            width: auto;
+            max-height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
     &__modal-close-btn {
         position: absolute;
@@ -163,9 +170,17 @@
         }
     }
     &__modal-container {
-        height: calc(100vh - 64px);
         overflow: hidden;
         position: relative;
+
+        &_horizontal {
+            width: calc(100vw - 64px);
+            height: auto;
+        }
+        &_vertical {
+            height: calc(100vh - 64px);
+            width: auto;
+        }
     }
     &__bold {
         font-weight: bolder;

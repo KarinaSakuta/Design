@@ -3,6 +3,7 @@ import { TASK_STATE, IMAGE } from './constants';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
 import CrossSVG from './CrossSVG';
+import classnames from 'classnames';
 
 export default class Content extends Component {
     constructor(props) {
@@ -10,13 +11,15 @@ export default class Content extends Component {
 
         this.state = {
             isModalOpened: false,
-            modalImgSrc: null,
+            modalImgData: null,
         };
     }
     openImageModal = (event) => {
         const target = event.target;
-        const src = target.src;
-        this.setState({ isModalOpened: true, modalImgSrc: src });
+        const key = target.dataset.key;
+        const imageData = IMAGE[key];
+
+        this.setState({ isModalOpened: true, modalImgData: imageData });
     }
 
     closeImageModal = (event) => {
@@ -24,6 +27,10 @@ export default class Content extends Component {
     }
 
     renderImageModal() {
+        const modalImgData = this.state.modalImgData || {};
+        const { src = '', orientation = '' } = modalImgData;
+        const containerClasses = classnames('illustration__modal-container', `illustration__modal-container_${orientation}`);
+
         return (
             <Dialog
                 classes
@@ -34,10 +41,10 @@ export default class Content extends Component {
                 disableScrollLock={false}
                 maxWidth={false}
             >
-                <div className="illustration__modal-container">
+                <div className={containerClasses}>
                     <img 
-                        src={this.state.modalImgSrc} 
-                        className="illustration__modal-img" 
+                        src={src} 
+                        className="illustration__modal-img"
                         alt="modal"
                     />
                     <div onClick={this.closeImageModal} className="illustration__modal-close-btn">
@@ -60,8 +67,9 @@ export default class Content extends Component {
                 <div key={key} className="illustration__item">
                     <h3 className="illustration__img-title">{`Картинка ${Number(key) + 1}`}</h3>
                     <div className={`illustration__img-container illustration__img-container_${key}`}>
-                        <img 
-                            src={IMAGE[key]} 
+                        <img
+                            data-key={key}
+                            src={IMAGE[key].src} 
                             className="illustration__img" 
                             alt="illustration"
                             onClick={this.openImageModal}
