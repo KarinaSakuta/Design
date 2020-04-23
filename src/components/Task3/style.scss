@@ -307,10 +307,15 @@
             margin-right: -1px;
         }
         .remembrance__input-text {
-                margin-right: -1px;
+            // margin-right: -1px;
+            margin-right: 2px;
         }
     }
-
+    .remembrance__item:last-child {
+        .remembrance__input-text_final {
+            margin-right: -1px;
+        }
+    }
     .remembrance__input-text_initial {
         .MuiInputBase-input {
             margin-top: 5px;
