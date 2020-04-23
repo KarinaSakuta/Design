@@ -235,12 +235,11 @@
         overflow-y: overlay;
         position: fixed;
     }
-
-    .cross-svg__container:hover {
-        .cross-svg {
-            &_path {
-                fill: #212121;
-            }
+}
+.cross-svg__container:hover {
+    .cross-svg {
+        &_path {
+            fill: #212121;
         }
     }
 }
