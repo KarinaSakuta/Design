@@ -53,6 +53,7 @@ export default class Content extends Component {
                 onBackdropClick={this.closeImageModal}
                 aria-labelledby="simple-dialog-title"
                 disableScrollLock={false}
+                maxWidth="90%"
             >
                 <div className="illustration__modal-container">
                      <div className="illustration__modal-img-container">
