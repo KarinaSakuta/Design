@@ -3,7 +3,7 @@ import { TASK_STATE, IMAGE } from './constants';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
 import CrossSVG from './CrossSVG';
-import classnames from 'classnames';
+import throttle from './throttle';
 
 export default class Content extends Component {
     constructor(props) {
@@ -12,8 +12,32 @@ export default class Content extends Component {
         this.state = {
             isModalOpened: false,
             modalImgData: null,
+            clientWidth: document.documentElement.clientWidth,
+            clientHeight: document.documentElement.clientHeight,
         };
+
+        this.throttledHandleResize = throttle(this.handleResive, 300);
     }
+
+    componentDidMount() {
+        window.addEventListener('resize', this.throttledHandleResize);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.throttledHandleResize);
+    }
+
+    updateClientDimentions() {
+        this.setState({
+            clientWidth: document.documentElement.clientWidth,
+            clientHeight: document.documentElement.clientHeight,
+        });
+    }
+
+    handleResive = () => {
+        this.updateClientDimentions();
+    }
+
     openImageModal = (event) => {
         const target = event.target;
         const key = target.dataset.key;
@@ -26,14 +50,22 @@ export default class Content extends Component {
         this.setState({ isModalOpened: false });
     }
 
+    getZoomCoef(imgWidth, imgHeight) {
+        const { clientWidth, clientHeight } = this.state;
+
+        const availableWidth = clientWidth - 64;
+        const availableHeight = clientHeight - 64;
+
+        return 1 / Math.max(imgWidth / availableWidth, imgHeight / availableHeight);
+    }
+
     renderImageModal() {
         const modalImgData = this.state.modalImgData || {};
-        const { src = '', orientation = '' } = modalImgData;
-        const containerClasses = classnames('illustration__modal-container', `illustration__modal-container_${orientation}`);
+        const { src = '', width = 0, height = 0 } = modalImgData;
+        const zoomKoef = this.getZoomCoef(width, height);
 
         return (
             <Dialog
-                classes
                 open={this.state.isModalOpened}
                 onClose={this.closeImageModal}
                 onBackdropClick={this.closeImageModal}
@@ -41,9 +73,13 @@ export default class Content extends Component {
                 disableScrollLock={false}
                 maxWidth={false}
             >
-                <div className={containerClasses}>
+                <div className="illustration__modal-container">
                     <img 
-                        src={src} 
+                        src={src}
+                        style={{
+                            height: height * zoomKoef,
+                            width: width * zoomKoef,
+                        }}
                         className="illustration__modal-img"
                         alt="modal"
                     />
