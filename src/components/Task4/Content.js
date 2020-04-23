@@ -20,7 +20,7 @@ export default class Content extends Component {
     }
 
     closeImageModal = (event) => {
-        this.setState({ isModalOpened: false, modalImgSrc: null });
+        this.setState({ isModalOpened: false });
     }
 
     renderImageModal() {

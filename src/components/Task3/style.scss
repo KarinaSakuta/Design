@@ -1,5 +1,6 @@
 .remembrance {
     max-width: 800px;
+    width: 100%;
     min-height: 507px;
     font-family: Roboto;
     // margin: 0 auto;
@@ -15,7 +16,10 @@
         }
     }
     &_final {
-        margin-left: 80px;
+
+        .remembrance__container {
+            margin-left: 80px;
+        }
         .remembrance__title {
             margin-bottom: 24px;
         }

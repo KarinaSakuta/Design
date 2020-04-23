@@ -215,8 +215,8 @@
     position: fixed;
 }
 .MuiDialog-paperWidthSm {
-    min-width: 700px !important;
-    max-width: 1000px !important;
+    // min-width: 700px !important;
+    max-width: 90% !important;
 }
 
 #root, body, html  {
