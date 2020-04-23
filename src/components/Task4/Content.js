@@ -26,24 +26,22 @@ export default class Content extends Component {
     renderImageModal() {
         return (
             <Dialog
+                classes
                 open={this.state.isModalOpened}
                 onClose={this.closeImageModal}
                 onBackdropClick={this.closeImageModal}
                 aria-labelledby="simple-dialog-title"
                 disableScrollLock={false}
-                maxWidth={"90%"}
-                maxHeight={"90%"}
+                maxWidth={false}
             >
                 <div className="illustration__modal-container">
-                     <div className="illustration__modal-img-container">
-                         <img 
-                             src={this.state.modalImgSrc} 
-                             className="illustration__modal-img" 
-                             alt="modal"
-                         />
-                         <div onClick={this.closeImageModal} className="illustration__modal-close-btn">
-                            <CrossSVG />
-                         </div>
+                    <img 
+                        src={this.state.modalImgSrc} 
+                        className="illustration__modal-img" 
+                        alt="modal"
+                    />
+                    <div onClick={this.closeImageModal} className="illustration__modal-close-btn">
+                        <CrossSVG />
                     </div>
                 </div>
           </Dialog>
