@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { TASK_STATE, IMAGE, customStyles } from './constants';
+import { TASK_STATE, IMAGE } from './constants';
 import TextField from '@material-ui/core/TextField';
-import Modal from '@material-ui/core/Modal';
 import Dialog from '@material-ui/core/Dialog';
+import CrossSVG from './CrossSVG';
 
 export default class Content extends Component {
     constructor(props) {
@@ -25,35 +25,12 @@ export default class Content extends Component {
 
     renderImageModal() {
         return (
-            // <Modal
-            //     isOpen={this.state.isModalOpened}
-            //     style={customStyles}
-            //     contentLabel="onRequestClose Example"
-            //     onRequestClose={this.closeImageModal}
-            //     shouldCloseOnOverlayClick={true}
-            // >
-            //     <div className="illustration__modal-container">
-            //         <div className="illustration__modal-img-container">
-            //             <img 
-            //                 src={this.state.modalImgSrc} 
-            //                 className="illustration__modal-img" 
-            //                 alt="modal"
-            //             />
-            //         </div>
-            //         <div onClick={this.closeImageModal} className="illustration__modal-close-btn" />
-            //     </div>
-            // </Modal>
-
-            // <button type="button" onClick={handleOpen}>
-            //     Open Modal
-            // </button>
             <Dialog
                 open={this.state.isModalOpened}
                 onClose={this.closeImageModal}
                 onBackdropClick={this.closeImageModal}
                 aria-labelledby="simple-dialog-title"
                 disableScrollLock={false}
-                maxWidth="90%"
             >
                 <div className="illustration__modal-container">
                      <div className="illustration__modal-img-container">
@@ -62,7 +39,9 @@ export default class Content extends Component {
                              className="illustration__modal-img" 
                              alt="modal"
                          />
-                         <div onClick={this.closeImageModal} className="illustration__modal-close-btn" />
+                         <div onClick={this.closeImageModal} className="illustration__modal-close-btn">
+                            <CrossSVG />
+                         </div>
                     </div>
                 </div>
           </Dialog>

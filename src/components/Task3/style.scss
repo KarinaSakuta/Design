@@ -82,7 +82,7 @@
     }
     &__input-number {
         max-height: 64px;
-        max-width: 56px;
+        max-width: 54px;
         font-weight: 500;
         font-size: 72px;
         line-height: 33px;
@@ -154,6 +154,12 @@
 
 
 .remembrance {
+    .remembrance__input-number, .remembrance__input-text {
+        margin-right: 1px;
+    }
+    .remembrance__input-number {
+        padding-left: 4px;
+    }
     .remembrance__input-text_editable {
         position: relative;
         &:after {
@@ -295,6 +301,16 @@
             }
         }
     }
+
+    .remembrance__item:last-child {
+        .remembrance__input-number {
+            margin-right: -1px;
+        }
+        .remembrance__input-text {
+                margin-right: -1px;
+        }
+    }
+
     .remembrance__input-text_initial {
         .MuiInputBase-input {
             margin-top: 5px;
